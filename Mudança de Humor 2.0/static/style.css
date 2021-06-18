@@ -1,0 +1,38 @@
+body{
+  background-image: url(bg2.jpg);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  display: grid;
+  justify-content: center;
+  align-content: center; 
+}
+
+.container{
+  height: 100vh;
+  width: 100vh;
+  display: grid;
+  justify-content: center;  
+  align-content: center;
+}
+
+h1{
+  display: grid;
+  justify-content: center;
+  font: normal 30pt arial;
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+#botao{  
+  border-radius: 20px;
+  border-color:blueviolet ;
+  background-color: rgba(0, 0, 0, 0.322);
+  color: white;
+  font-size: 18pt;
+  
+  width: 200px;
+  height: 40px;
+  margin-left: 120px;
+}

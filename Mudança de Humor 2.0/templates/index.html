@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mudança de Humor</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="container">
+    <img id="imagem" src="#" alt="Imagem" width="450px" height="600px">
+    <h1 id="txt"></h1>
+    <button id="botao" onclick="trocar()">CLIQUE</button>
+  </div>
+
+  <script> 
+    const majinboo = {
+      antes: true,
+
+      imgantes: 'https://i.pinimg.com/originals/26/d0/8b/26d08be0ab87326fc6ad26cc9bdb2ddf.png',
+      imgdepois: 'https://i0.wp.com/i.pinimg.com/originals/f0/f2/70/f0f27065fdc458fe4070190dd77acf45.png',
+    }    
+
+    function trocar(){
+      const elementoImagem = document.getElementById('imagem')
+      const elementoTexto = document.getElementById('txt')
+      
+      if (majinboo.antes){
+        elementoImagem.src = majinboo.imgantes;
+        elementoTexto.innerText = 'Majin Boo ANTES do CSS';
+      } else {
+        elementoImagem.src = majinboo.imgdepois;
+        elementoTexto.innerText = 'Majin Boo DEPOIS do CSS'
+      }
+
+    }
+  
+  trocar();
+
+  const botaotrocar = document.getElementById('botao');
+  botaotrocar.addEventListener('click', function () {
+    majinboo.antes = !majinboo.antes;
+    trocar();
+  });
+  </script>
+</body>
+</html>
